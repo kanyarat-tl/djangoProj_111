@@ -1,0 +1,78 @@
+{% extends 'master/base.html' %}
+{% load static %}
+{% block body %}
+
+        <!-- Content Row -->
+        <div class="row">
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-12 col-md-6">
+                <div class="card my-3">
+                    <div class="card"style="background-color: pink">
+                        <div class="card-body">
+                            <div class="row my-4">
+                                <div class="col-md-12 text-center ">
+                                        <span >ประวัติการศึกษา (Education)</span>
+                                    <a class="text-white btn btn-black float-end" href="Home">
+                                        <i class="fas fa-home mx-1">
+                                        </i>Home
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <style>
+                                    table.table-bordered > tbody > tr > td{
+                                      border:3px solid black;
+                                    }
+                                </style>
+                                <table class="table table-bordered">
+                                  <tbody>
+                                    <tr>
+                                      <td scope="row" class="text-center"><img src="{% static "images/Education/Edu1.png" %}" width="30%"></td>
+                                      <td><h1 class="h4"> จบการศึกษา ระดับชั้นประถมศึกษาที่ 1-6 </h1>
+                                    <h1 class="h4"> ที่โรงเรียนอนุบาลร้อยเอ็ด </h1></td>
+                                    </tr>
+                                    <tr>
+                                      <td scope="row" class="text-center"><img src="{% static "images/Education/Edu2.png" %}" width="25%"></td>
+                                      <td><h1 class="h4"> จบการศึกษา ระดับชั้นมัธยมศึกษาปีที่ 1-6 </h1>
+                                    <h1 class="h4"> ที่โรงเรียนสตรีศึกษา จังหวัดร้อยเอ็ด </h1></td>
+                                    </tr>
+                                    <tr>
+                                      <td scope="row" class="text-center"><img src="{% static "images/Education/Edu3.png" %}" width="30%"></td>
+                                      <td><h1 class="h4"> จบการศึกษา ระดับประกาศนียบัตรวิชาชีพชั้นสูง </h1>
+                                    <h1 class="h4"> ที่วิทยาลัยเทคนิคร้อยเอ็ด </h1></td>
+                                    </tr>
+                                  <tr>
+                                      <td scope="row" class="text-center">
+                                          <img src="{% static "images/Education/Edu4.png" %}" width="25%">
+                                      </td>
+                                      <td>
+                                          <h1 class="h4"> กำลังศึกษา ระดับปริญญาตรี </h1>
+                                          <h1 class="h4"> ที่มหาวิทยาลัยเทคโนโลยีราชมงคล วิทยาเขตขอนแก่น </h1>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                             <div class="row ">
+                                <div class="col-md-12">
+                                    <a class="text-white btn btn-black float-start" href="MyHistory" >
+                                            <i class="fas fa-arrow-circle-left mx-1 "></i>
+                                            <span>ย้อนกลับ</span>
+                                    </a>
+                                    <a class="text-white btn btn-black float-end" href="MyInterests" >
+                                            <span>ถัดไป</span>
+                                            <i class="fas fa-arrow-circle-right mx-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+{% endblock %}

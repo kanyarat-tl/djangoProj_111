@@ -1,0 +1,79 @@
+{% extends 'master/base.html' %}
+{% load static %}
+{% block body %}
+        <style>
+            a:link{
+                text-decoration: none;
+            }
+        </style>
+        <!-- Content Row -->
+        <div class="row">
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-12 col-md-6">
+                <div class="card my-3">
+                    <div class="card"style="background-color: pink">
+                        <div class="card-body">
+
+                            <div class="row my-4">
+                    <div class="col-md-12 text-center ">
+                        <span>บุคคลต้นแบบ (Role Model)</span>
+                        <a class="text-white btn btn-black float-end" href="Home">
+                            <i class="fas fa-home mx-1">
+                            </i>Home
+                        </a>
+                    </div>
+                </div>
+                            <div class="row ">
+                                <div class="col-md-4">
+                                    <img src="{% static "images/Rolemodel/Rolemodel.jpg"%}" width="100%">
+                                </div>
+                                <div class="col-md-8 text-dark">
+                                    <div class="row ">
+                                        <div class="col-md-3">
+                                            <h1 class="h3 text-mouse"><span class="text-danger">ชื่อ</span> นางสาวกัลยกร</h1>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h1 class="h3 text-mouse"><span class="text-danger">นามสกุล</span> ไตรลิน</h1>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <h1 class="h3 text-mouse"><span class="text-danger">ชื่อเล่น</span> พี่เจนนี่</h1>
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col-md-12">
+                                            <h1 class="h3 text-mouse"><span class="text-danger">วันเกิด</span> วันจันทร์ที่ 20 เมษายน พ.ศ.2541</h1>
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col-md-8">
+                                            <h1 class="h3 text-mouse"><span class="text-danger">อาชีพ</span> คุณครูสอนภาษาอังกฤษ</h1>
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col-md-12">
+                                            <h1 class="h3 text-mouse"><span class="text-danger">เหตุผลที่เป็นบุคคลต้นแบบ</span> เพราะพี่เป็นแรงผลักดันให้ทำทุกๆ อย่างให้สำเร็จ พี่เป็นคนที่เวลาตั้งใจทำอะไรแล้วจะตั้งใจทำให้สุดความสามารถจนกว่างานนั้นจะทำสำเร็จ
+                                                <br>
+                                                ถึงแม้จะไม่สำเร็จบางอย่างพี่ก็ไม่เคยยอมแพ้และเริ่มต้นทำใหม่ทำให้ดีกว่าเดิม จนทำสำเร็จ ฉันเลยมีพี่เป็นแบบอย่าง เพื่อจะทำอะไรๆ ให้ประสบความสำเร็จแบบพี่บ้าง
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="row ">
+                                <div class="col-md-12">
+                                    <a class="text-white btn btn-black float-start" href="MyProducts" >
+                                            <i class="fas fa-arrow-circle-left mx-1 "></i>
+                                            <span>ย้อนกลับ</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+{% endblock %}

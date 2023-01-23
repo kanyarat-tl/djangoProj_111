@@ -1,0 +1,156 @@
+{% extends 'master/base.html' %}
+{% load static %}
+{% block body %}
+    <style>
+        a:link {
+            text-decoration: none;
+        }
+    </style>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-12 col-md-6">
+            <div class="card my-3">
+                <div class="card" style="background-color: pink">
+                    <div class="card-body">
+                        <div class="row my-4">
+                            <div class="col-md-12 ">
+
+                            </div>
+                        </div>
+                        <div class="card-header text-white " style="background-color: hotpink">
+                            <div class="row">
+                                <div class="col-md-8" >
+                                    <h4>ข้อมูลส่วนตัว</h4>
+                                </div>
+                                <div class="col-md-4">
+                                    <a class="text-white btn btn-black float-end" href="Home">
+                                        <i class="fas fa-home mx-1">
+                                        </i>
+                                        Home
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row ">
+                                <div class="col-md-12 text-dark">
+                                    <div class="row ">
+                                        <div class="col-md-4">
+                                            <h1 class="h3 text-mouse">
+                                                <span class="text-danger">รหัสนักศึกษา : </span> {{ IdNumber }}
+                                            </h1>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h1 class="h3 text-mouse">
+                                                <span class="text-danger">ชื่อ-นามสกุล : </span> {{ fullName }}
+                                            </h1>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h1 class="h3 text-mouse"><span
+                                                    class="text-danger">ชื่อเล่น : </span>{{ nickname }} </h1>
+                                        </div>
+
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col-md-4">
+                                            <h1 class="h3 text-mouse">
+                                                <span class="text-danger">วันเกิด : </span> {{ birthday }}</h1>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h1 class="h3 text-mouse">
+                                                <span class="text-danger">อายุ : </span> {{ age }}
+                                            </h1>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h1 class="h3 text-mouse">
+                                                <span class="text-danger">กรุ๊ปเลือด : </span> {{ bloodType }}
+                                            </h1>
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col-md-4">
+                                            <h1 class="h3 text-mouse">
+                                                <span class="text-danger">อาชีพ : </span> {{ occupation }}
+                                            </h1>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h1 class="h3 text-mouse">
+                                                <span class="text-danger">เพศ : </span> {{ sex }}
+                                            </h1>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h1 class="h3 text-mouse"><span
+                                                    class="text-danger">สัตว์ที่ชอบ : </span>{{ animalLike }} </h1>
+                                        </div>
+                                    </div>
+
+                                    <div class="row my-2">
+                                        <div class="col-md-4">
+                                            <h1 class="h3 text-mouse">
+                                                <span class="text-danger">เบอร์โทรศัพท์ : </span> {{ tel }}
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="sidebar-divider">
+                        <div class="card-header text-white " style="background-color: hotpink">
+                            <h4>ข้อมูลสินค้า</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row ">
+                                <div class="col-md-12 ">
+                                <style>
+                                    table.table-bordered > thead > tr > th{
+                                      border:3px solid black;
+                                    }
+                                    table.table-bordered > tbody > tr > td{
+                                      border:3px solid black;
+                                    }
+                                </style>
+                                    <table class="table table-bordered table-hover ">
+                                        <thead class="text-center text-white bg-dark"
+                                               style="font-size: 20px">
+                                        <tr>
+                                            <th width="30%">สินค้า</th>
+                                            <th width="20%">ราคา</th>
+                                            <th width="50%">รูปภาพ</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody class="text-dark text-center">
+                                        {% for product in myproduct %}
+
+                                            <tr>
+                                                <td><h4>{{ product.0 }}</h4></td>
+                                                <td><h4>{{ product.1|floatformat:2 }}</h4></td>
+                                                <td>
+                                                    <img src="{% static  product.2 %}" width="50%">
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row ">
+                            <div class="col-md-12">
+                                <a class="text-white btn btn-black float-start" href="MyProducts">
+                                    <i class="fas fa-arrow-circle-left mx-1 "></i>
+                                    <span>ย้อนกลับ</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

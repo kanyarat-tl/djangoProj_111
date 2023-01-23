@@ -1,0 +1,111 @@
+{% extends 'master/base.html' %}
+{% load static %}
+{% block body %}
+        <style>
+            a:link{
+                text-decoration: none;
+            }
+        </style>
+        <div class="row">
+            <div class="col-xl-12 col-md-6">
+                <div class="card my-3">
+                    <div class="card"style="background-color: pink">
+                        <div class="card-body">
+                             <div class="row my-4">
+                                <div class="col-md-12 text-center ">
+                                        <span >ประวัติส่วนตัว (Personal Record)</span>
+                                    <a class="text-white btn btn-black float-end" href="Home">
+                                        <i class="fas fa-home mx-1">
+                                        </i>Home
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="{% static "images/MyHistory/Profile1.jpg"%}" width="100%">
+                                </div>
+                                <div class="col-md-8 ">
+                                    <div class="row ">
+                                        <div class="col-md-4">
+                                            <h1 class="h3 text-mouse"><span class="text-danger">ชื่อ :</span> นางสาวกัลยรัตน์</h1>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h1 class="h3 text-mouse"><span class="text-danger">นามสกุล :</span> ไตรลิน</h1>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h1 class="h3 text-mouse"><span class="text-danger">ชื่อเล่น :</span> เอ็มมี่</h1>
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col-md-6">
+                                            <h1 class="h3 text-mouse"><span class="text-danger">วันเกิด :</span> วันจันทร์ที่ 10 กันยายน 2544</h1>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <h1 class="h3 text-mouse"><span class="text-danger">อายุ :</span> 21 ปี</h1>
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col-md-12">
+                                            <h1 class="h3 text-mouse"><span class="text-danger">ที่อยู่ปัจจุบัน :</span> 194/246 หมู่ที่ 6 ซอย 16 อำเภอเมืองขอนแก่น ตำบลในเมือง
+                                                <br> จังหวัดขอนแก่น 40000 </h1>
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col-md-12">
+                                            <h1 class="h3 text-mouse"><span class="text-danger">สถานศึกษา :</span> มหาวิทยาลัยเทคโนโลยีราชมงคลอีสาน วิทยาเขตขอนแก่น</h1>
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col-md-12">
+                                            <h1 class="h3 text-mouse"><span class="text-danger">ผลไม้ที่ชอบ :</span> ลิ้นจี่ ทุเรียน ลำไย </h1>
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col-md-12">
+                                            <h1 class="h3 text-mouse"><span class="text-danger">คติประจำใจ :</span> ขยัน หมั่นเพียร เป็นหนทางสู่ความสำเร็จ</h1>
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col-md-12">
+                                            <h1 class="h3 text-mouse"><span class="text-danger">ข้อมูลการติดต่อ :</span></h1>
+                                            <div class="row">
+                                                        <div class="col-md-12">
+                                                            <h1 class="h3 text-mouse mx-5"><span class="text-danger">
+                                                                <i class="fa-solid fa-phone"></i> เบอร์โทรศัพท์ :</span> 096-8491387</h1>
+                                                        </div>
+                                                    </div>
+                                            <div class="row my-2">
+                                                <div class="col-md-12">
+                                                    <h1 class="h3 text-mouse mx-5"><span class="text-danger">
+                                                        <i class="fa-solid fa-envelope"></i> E-Mail :</span> kanyarat.tl@rmuti.ac.th</h1>
+                                                </div>
+                                            </div>
+                                            <div class="row my-2">
+                                                <div class="col-md-12">
+                                                    <h1 class="h3 text-mouse mx-5"><span class="text-danger">
+                                                        <i class="fa-brands fa-instagram"></i> Instagram :</span> k.em_333</h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <a class="text-white btn btn-black float-end" href="{% url 'MyEducation' %}" >
+                                            <span>ถัดไป</span>
+                                            <i class="fas fa-arrow-circle-right mx-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+{% endblock %}

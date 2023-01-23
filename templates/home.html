@@ -1,0 +1,14 @@
+{% extends 'master/base.html' %}
+{% load static %}
+{% block body %}
+        <div class="row">
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-12 col-md-6 text-center">
+                <img src="{% static "images/bg/home1.png" %}" width="100%" class="my-3">
+                <a href="{% url 'MyHistory' %}" class="btn btn-lg mb-3"style="background-color: pink; ">
+                    <h3>เข้าสู่เว็บไซต์</h3>
+                </a>
+            </div>
+        </div>
+
+{% endblock %}
