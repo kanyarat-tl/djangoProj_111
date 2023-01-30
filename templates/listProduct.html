@@ -53,11 +53,11 @@
                                             <td>{{ product.pdType }}</td>
                                             <td>{{ product.pdPrice|floatformat:2|intcomma }}</td>
                                             <td>{{ product.pdPriceSale|floatformat:2|intcomma }}</td>
-                                            <td>{{ product.pdAmount }}</td>
-                                            <td>{{ product.pdSaleAmount }}</td>
+                                            <td>{{ product.pdAmount|intcomma }}</td>
+                                            <td>{{ product.pdSaleAmount|intcomma }}</td>
                                             <td>{{ product.total|floatformat:2|intcomma }}</td>
                                             <td>{{ product.saleTotal|floatformat:2|intcomma }}</td>
-                                            <td>{{ product.balance }}</td>
+                                            <td>{{ product.balance|intcomma }}</td>
                                         </tr>
                                     {% endfor %}
                                     </tbody>
