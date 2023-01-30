@@ -1,0 +1,50 @@
+{% extends 'master/base.html' %}
+{% load static %}
+{% block body %}
+    <style>
+        a:link {
+            text-decoration: none;
+        }
+    </style>
+    <div class="row">
+        <div class="col-xl-12 col-md-6">
+            <div class="card my-3">
+                <div class="card" style="background-color: pink">
+                    <div class="card-body">
+                        <div class="row my-4">
+                            <div class="col-md-12 text-center ">
+                                <span>เพิ่มรายการ (Input Product)</span>
+                                <a class="text-white btn btn-black float-end" href="{% url 'Home' %}">
+                                    <i class="fas fa-home mx-1">
+                                    </i>Home
+                                </a>
+                            </div>
+                        </div>
+                        <form action="{% url 'inputProduct' %}" method="POST" class="form-control">
+                            {% csrf_token %}
+                            <div class="row  my-3">
+                                <div class="col-md-6">
+                                    {{ form }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button class="text-white btn btn-black float-start" type="reset">
+                                        <i class="fas fa-eraser mx-1"></i>
+                                        <span>ล้างข้อมูล</span>
+                                    </button>
+                                    <button class="text-white btn btn-black float-end" type="submit">
+                                        <i class="fas fa-save mx-1"></i>
+                                        <span>บันทึก</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

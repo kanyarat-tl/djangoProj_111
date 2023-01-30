@@ -16,7 +16,7 @@
                         <div class="row my-4">
                     <div class="col-md-12 text-center ">
                         <span>สินค้าที่นำเสนอขาย (Products Offered For Sale)</span>
-                        <a class="text-white btn btn-black float-end" href="Home">
+                        <a class="text-white btn btn-black float-end" href="{% url 'Home' %}">
                             <i class="fas fa-home mx-1">
                             </i>Home
                         </a>
@@ -194,11 +194,11 @@
                     <div class="card-footer">
                         <div class="row ">
                             <div class="col-md-12">
-                                <a class="text-white btn btn-black float-start" href="MyInterests">
+                                <a class="text-white btn btn-black float-start" href="{% url 'MyInterests' %}">
                                     <i class="fas fa-arrow-circle-left mx-1 "></i>
                                     <span>ย้อนกลับ</span>
                                 </a>
-                                <a class="text-white btn btn-black float-end" href="MyRoleModel">
+                                <a class="text-white btn btn-black float-end" href="{% url 'MyRoleModel' %}">
                                     <span>ถัดไป</span>
                                     <i class="fas fa-arrow-circle-right mx-1"></i>
                                 </a>

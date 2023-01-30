@@ -1,0 +1,82 @@
+{% extends 'master/base.html' %}
+{% load static %}
+{% load humanize %}
+{% block body %}
+    <style>
+        a:link {
+            text-decoration: none;
+        }
+    </style>
+    <div class="row">
+        <div class="col-xl-12 col-md-6">
+            <div class="card my-3">
+                <div class="card" style="background-color: pink">
+                    <div class="card-body">
+                        <div class="row my-4">
+                            <div class="col-md-12 text-center ">
+                                <span>รายการสินค้า (Products List)</span>
+                                <a class="text-white btn btn-black float-end" href="{% url 'Home' %}">
+                                    <i class="fas fa-home mx-1">
+                                    </i>Home
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col-md-12">
+                                <h5>ผู้จัดทำ : นางสาวกัลยรัตน์ ไตรลิน 111-0</h5>
+                            </div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col-md-12">
+                                <table class="table table-hover  table-bordered">
+                                    <thead class="bg-primary text-white">
+                                    <tr>
+                                        <th>รหัสสินค้า</th>
+                                        <th>ชื่อสินค้า</th>
+                                        <th>ยี่ห้อสินค้า</th>
+                                        <th>ประเภทสินค้า</th>
+                                        <th>ราคาต่อหน่วย</th>
+                                        <th>ราคาขาย</th>
+                                        <th>จำนวนที่มีในคลัง</th>
+                                        <th>จำนวนที่ขายไป</th>
+                                        <th>ราคาสินค้าทั้งหมด</th>
+                                        <th>ราคาสินค้าที่ขายไปทั้งหมด</th>
+                                        <th>จำนวนคงเหลือ</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody style="background-color: #3dd5f3">
+                                    {% for product in products %}
+                                        <tr>
+                                            <td>{{ product.pdNumber }}</td>
+                                            <td>{{ product.pdName }}</td>
+                                            <td>{{ product.pdBrand }}</td>
+                                            <td>{{ product.pdType }}</td>
+                                            <td>{{ product.pdPrice|floatformat:2|intcomma }}</td>
+                                            <td>{{ product.pdPriceSale|floatformat:2|intcomma }}</td>
+                                            <td>{{ product.pdAmount }}</td>
+                                            <td>{{ product.pdSaleAmount }}</td>
+                                            <td>{{ product.total|floatformat:2|intcomma }}</td>
+                                            <td>{{ product.saleTotal|floatformat:2|intcomma }}</td>
+                                            <td>{{ product.balance }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col-md-12">
+                                <a href="{% url 'inputProduct' %}" class="btn btn-black float-end">
+                                    <i class="fas fa-plus"></i>
+                                    เพิ่มสินค้า
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
