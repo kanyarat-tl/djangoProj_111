@@ -1,0 +1,77 @@
+{% extends 'master/base.html' %}
+{% load static %}
+{% load humanize %}
+{% block body %}
+    <div class="row">
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-12 col-md-6">
+            <div class="card my-3">
+                <div class="card" style="background-color: pink">
+                    <div class="card-body">
+                        <div class="row my-4">
+                            <div class="col-md-12 text-center ">
+                                <span>แสดงรายการลูกค้าทั้งหมด (Show Customer List)</span>
+                                <a class="text-white btn btn-black float-end" href="{% url 'Home' %}">
+                                    <i class="fas fa-home mx-1">
+                                    </i>Home
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <style>
+                                table.table-bordered > tbody > tr > td {
+                                    border: 3px solid black;
+                                }
+                            </style>
+                            <table class="table table-bordered">
+                                <thead class="text-center text-white bg-dark">
+                                <tr>
+                                    <th>รหัสลูกค้า</th>
+                                    <th>ชื่อ</th>
+                                    <th>นามสกุล</th>
+                                    <th>ที่อยู่</th>
+                                    <th width="18%">Action</th>
+                                </tr>
+                                </thead>
+                                <tbody class="text-dark text-center" style="font-size: 20px">
+                                {% for Customer in Customers %}
+                                    <tr>
+                                        <td>{{ Customer.cid }}</td>
+                                        <td>{{ Customer.name }}</td>
+                                        <td>{{ Customer.surname }}</td>
+                                        <td>{{ Customer.address }}</td>
+                                        <td class="text-center">
+                                            <a href="{% url 'showCustomerOne' Customer.cid %}" class="btn btn-primary ">
+                                                <i class="fas fa-eye"></i>
+                                            </a>
+                                            <a href="{% url 'updateCustomer' Customer.cid %}"
+                                               class="btn btn-warning mx-2">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a href="{% url 'deleteCustomer' Customer.cid %}" class="btn btn-danger">
+                                                <i class="fas fa-trash"></i>
+                                            </a>
+                                        </td>
+
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row my-4">
+                        <div class="col-md-12">
+                            <a href="{% url 'newCustomer' %}" class="btn btn-success float-end">
+                                <i class="fas fa-plus"></i>
+                                เพิ่มลูกค้า
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

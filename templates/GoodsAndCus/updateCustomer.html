@@ -1,7 +1,6 @@
 {% extends 'master/base.html' %}
 {% load static %}
 {% block body %}
-
     <div class="row">
         <div class="col-xl-12 col-md-6">
             <div class="card my-3">
@@ -9,14 +8,14 @@
                     <div class="card-body">
                         <div class="row my-4">
                             <div class="col-md-12 text-center ">
-                                <span>เพิ่มรายการ (Input Product)</span>
+                                <span>แก้ไขข้อมูลลูกค้า (์Update Customer)</span>
                                 <a class="text-white btn btn-black float-end" href="{% url 'Home' %}">
                                     <i class="fas fa-home mx-1">
                                     </i>Home
                                 </a>
                             </div>
                         </div>
-                        <form action="{% url 'inputProduct' %}" method="POST" class="form-control">
+                        <form action="{% url 'updateCustomer' cid %}" method="POST" class="form-control">
                             {% csrf_token %}
                             <div class="row  my-3">
                                 <div class="col-md-6">

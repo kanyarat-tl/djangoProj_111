@@ -1,0 +1,52 @@
+
+
+{% extends 'master/base.html' %}
+{% load static %}
+{% block body %}
+    <div class="row">
+        <div class="col-xl-12 col-md-6">
+            <div class="card my-3">
+                <div class="card" style="background-color: pink">
+                    <div class="card-body">
+                        <div class="row my-4">
+                            <div class="col-md-12 text-center ">
+                                <span>ลูกค้า {{ customer.name }}</span>
+                                <a class="text-white btn btn-black float-end" onclick="history.back()">
+                                    <i class="fas fa-arrow-circle-left mx-1">
+                                    </i>Back
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 my-3">
+                                <h3>รหัสลูกค้า : {{ customer.cid }} </h3>
+                            </div>
+                            <div class="col-md-5 my-3">
+                                <h3>ชื่อ : {{ customer.name }} </h3>
+                            </div>
+                            <div class="col-md-5 my-3">
+                                <h3>นามสกุล : {{ customer.surname }} </h3>
+                            </div>
+
+                            <div class="col-md-12 my-3">
+                                <h3>เบอร์โทร : {{ customer.telephone }} </h3>
+                            </div>
+                            <div class="col-md-5 my-3">
+                                <h3>เพศ : {{ customer.gender }} </h3>
+                            </div>
+                            <div class="col-md-5 my-3">
+                                <h3>อาชีพ : {{ customer.carreer }} </h3>
+                            </div>
+                            <div class="col-md-12 my-3">
+                                <h3>ที่อยู่ : {{ customer.address }} </h3>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

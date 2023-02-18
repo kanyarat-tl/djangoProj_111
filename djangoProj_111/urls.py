@@ -14,8 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
+
 from ProfileApp import views
+from django.contrib import admin
+
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('', views.home),
     path('Home', views.home,name="Home"),
     path('MyHistory', views.MyHistory, name="MyHistory"),
@@ -26,4 +30,14 @@ urlpatterns = [
     path('showMyData', views.showMyData, name="showMyData"),
     path('inputProduct', views.inputProduct, name="inputProduct"),
     path('listProduct', views.listProduct, name="listProduct"),
+    path('showGoodsList',views.showGoodsList,name="showGoodsList"),
+    path('<gid>/showGoodsOne',views.showGoodsOne,name="showGoodsOne"),
+    path('showCustomerList',views.showCustomerList,name="showCustomerList"),
+    path('<cid>/showCustomerOne',views.showCustomerOne,name="showCustomerOne"),
+    path('newGoods',views.newGoods,name="newGoods"),
+    path('<gid>/updateGoods',views.updateGoods,name="updateGood"),
+    path('<gid>/deleteGoods',views.deleteGoods,name="deleteGood"),
+    path('newCustomer',views.newCustomer,name="newCustomer"),
+    path('<cid>/updateCustomer',views.updateCustomer,name="updateCustomer"),
+    path('<cid>/deleteCustomer',views.deleteCustomer,name="deleteCustomer"),
 ]
